@@ -9,7 +9,9 @@ lazy val root = (project in file("."))
   )
 
 libraryDependencies ++= Seq(
-  "org.neo4j.driver" % "neo4j-java-driver" % "5.12.0",
+  "org.neo4j.driver" % "neo4j-java-driver" % "4.4.18",
+  "com.typesafe.akka" %% "akka-http" % "10.2.9",
+  "com.typesafe.akka" %% "akka-stream" % "2.6.19",
   "io.circe" %% "circe-core" % "0.14.5",
   "io.circe" %% "circe-parser" % "0.14.5",
   "io.circe" %% "circe-generic" % "0.14.5"

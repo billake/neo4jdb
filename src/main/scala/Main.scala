@@ -5,6 +5,8 @@ import akka.http.scaladsl.Http
 import akka.stream.Materializer
 import com.inno.hackaton2025.api._
 import com.inno.hackaton2025.service.Neo4jService
+import com.inno.hackaton2025.swagger.SwaggerDocService
+import akka.http.scaladsl.server.Directives._
 
 import scala.concurrent.ExecutionContext
 import scala.io.StdIn
@@ -15,11 +17,16 @@ object Main extends App {
   implicit val executionContext: ExecutionContext = system.dispatcher
 
   val neo4jService = new Neo4jService("bolt://localhost:7687", "neo4j", "password")
-  val routes = new ApiRoutes(neo4jService).route
 
-  val bindingFuture = Http().newServerAt("localhost", 8080).bind(routes)
+  val apiRoutes = new ApiRoutes(neo4jService).route
+  val swaggerRoutes = new SwaggerDocService(system).routes
+
+  val allRoutes = apiRoutes ~ swaggerRoutes
+
+  val bindingFuture = Http().newServerAt("0.0.0.0", 8080).bind(allRoutes)
 
   println(s"Server running at http://localhost:8080/")
+  println(s"Swagger JSON available at http://localhost:8080/api-docs/")
   println("Press ENTER to stop...")
   StdIn.readLine()
   bindingFuture.flatMap(_.unbind()).onComplete(_ => system.terminate())

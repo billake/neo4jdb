@@ -2,6 +2,7 @@ package com.inno.hackaton2025.service
 
 import org.neo4j.driver.{AuthTokens, Driver, GraphDatabase, Session}
 import com.inno.hackaton2025.model.models._
+import com.inno.hackaton2025.util.CypherUtils.escapeCypherString
 
 class Neo4jService(uri: String, user: String, password: String) {
 
@@ -42,7 +43,7 @@ class Neo4jService(uri: String, user: String, password: String) {
               val questionQuery =
                 s"""
                    |MERGE (th:Theme {name: '${theme.name}'})
-                   |MERGE (q:Question {name: '${question.name}', type: '${question.`type`}', difficulty: '${question.difficulty}', weight: ${question.weight}})
+                   |MERGE (q:Question {name: '${escapeCypherString(question.name)}', type: '${question.`type`}', difficulty: '${question.difficulty}', weight: ${question.weight}})
                    |MERGE (th)-[:HAS_QUESTION]->(q)
                    |""".stripMargin
               session.run(questionQuery)
@@ -50,8 +51,8 @@ class Neo4jService(uri: String, user: String, password: String) {
               question.followupQuestions.foreach { fq =>
                 val fqQuery =
                   s"""
-                     |MERGE (q:Question {name: '${question.name}'})
-                     |MERGE (fq:FollowupQuestion {name: '${fq.name}', type: '${fq.`type`}', difficulty: '${fq.difficulty}', weight: ${fq.weight}})
+                     |MERGE (q:Question {name: '${escapeCypherString(question.name)}'})
+                     |MERGE (fq:FollowupQuestion {name: '${escapeCypherString(fq.name)}', type: '${fq.`type`}', difficulty: '${fq.difficulty}', weight: ${fq.weight}})
                      |MERGE (q)-[:HAS_FOLLOWUP]->(fq)
                      |""".stripMargin
                 session.run(fqQuery)

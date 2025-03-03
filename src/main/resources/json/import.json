@@ -1,0 +1,368 @@
+{
+  "domains": [
+    {
+      "title": "Frontend",
+      "topics": [
+        {
+          "title": "React",
+          "themes": [
+            {
+              "title": "Virtual DOM",
+              "questions": [
+                {
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What is the Virtual DOM and how does it work?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "What is the difference between the Virtual DOM and the Real DOM?",
+                      "followUpQuestions": [
+                        {
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "How does React's diffing algorithm work to update the Real DOM?"
+                        }
+                      ]
+                    },
+                    {
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "Why is the Virtual DOM considered more efficient for rendering?"
+                    }
+                  ]
+                },
+                {
+                  "weight": 8,
+                  "tags": ["middle", "senior"],
+                  "title": "Explain the reconciliation process in React.",
+                  "followUpQuestions": [
+                    {
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What are keys in React and why are they important for reconciliation?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Component Lifecycle",
+              "questions": [
+                {
+                  "weight": 6,
+                  "tags": ["junior", "middle"],
+                  "title": "Explain the component lifecycle methods in React.",
+                  "followUpQuestions": [
+                    {
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "How do lifecycle methods differ between class components and functional components with hooks?"
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "When would you use componentDidUpdate or useEffect with dependencies?"
+                    }
+                  ]
+                },
+                {
+                  "weight": 8,
+                  "tags": ["middle", "senior"],
+                  "title": "What are React Hooks and why were they introduced?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "Explain the rules of Hooks and why they're important."
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How would you implement a custom Hook and in what scenarios would you use one?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "JavaScript",
+          "themes": [
+            {
+              "title": "Asynchronous JavaScript",
+              "questions": [
+                {
+                  "weight": 7,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "Explain Promises and their benefits over callbacks.",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "What is Promise chaining and how does it work?",
+                      "followUpQuestions": [
+                        {
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "How do you handle errors in Promise chains?"
+                        }
+                      ]
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "Explain the difference between Promise.all, Promise.race, Promise.allSettled, and Promise.any."
+                    }
+                  ]
+                },
+                {
+                  "weight": 8,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What is async/await and how does it simplify asynchronous code?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 9,
+                      "tags": ["middle", "senior"],
+                      "title": "How do you handle errors with async/await?"
+                    },
+                    {
+                      "weight": 7,
+                      "tags": ["junior", "middle"],
+                      "title": "Can you convert a function that returns a Promise to use async/await? Provide an example."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Closures and Scope",
+              "questions": [
+                {
+                  "weight": 6,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What is a closure in JavaScript?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 7,
+                      "tags": ["middle"],
+                      "title": "How can closures be used to create private variables?"
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "What are potential memory leak issues with closures and how can they be avoided?"
+                    }
+                  ]
+                },
+                {
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "Explain lexical scope in JavaScript.",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "What is the difference between function scope and block scope?"
+                    },
+                    {
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "How do let, const, and var differ in terms of scoping?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Backend",
+      "topics": [
+        {
+          "title": "Node.js",
+          "themes": [
+            {
+              "title": "Event Loop",
+              "questions": [
+                {
+                  "weight": 8,
+                  "tags": ["middle", "senior", "mike wasowski interview"],
+                  "title": "What is the Node.js Event Loop and how does it work?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What is the difference between the Event Loop and the Call Stack?",
+                      "followUpQuestions": [
+                        {
+                          "weight": 10,
+                          "tags": ["senior"],
+                          "title": "How do microtasks and macrotasks get processed in the Event Loop?"
+                        }
+                      ]
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How does the Event Loop handle I/O operations differently from synchronous code?"
+                    }
+                  ]
+                },
+                {
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What are Node.js streams and how do they relate to the Event Loop?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you handle backpressure in Node.js streams?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Performance Optimization",
+              "questions": [
+                {
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What techniques can you use to improve the performance of a Node.js application?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How does the Node.js cluster module help with performance?",
+                      "followUpQuestions": [
+                        {
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What are the trade-offs of using the cluster module versus a load balancer?"
+                        }
+                      ]
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How can you identify and fix memory leaks in Node.js applications?"
+                    }
+                  ]
+                },
+                {
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "Explain how to implement caching strategies in Node.js applications.",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "When would you use in-memory caching versus distributed caching?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Databases",
+          "themes": [
+            {
+              "title": "SQL vs NoSQL",
+              "questions": [
+                {
+                  "weight": 6,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What are the key differences between SQL and NoSQL databases?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "In what scenarios would you choose a SQL database over a NoSQL database?",
+                      "followUpQuestions": [
+                        {
+                          "weight": 8,
+                          "tags": ["senior"],
+                          "title": "How would you handle relational data in a NoSQL database?"
+                        }
+                      ]
+                    },
+                    {
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "Explain the CAP theorem and how it applies to different database types."
+                    }
+                  ]
+                },
+                {
+                  "weight": 8,
+                  "tags": ["senior"],
+                  "title": "How do you design a database schema for scalability?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What strategies would you use for database sharding and partitioning?"
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you handle database migrations with zero downtime?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Database Optimization",
+              "questions": [
+                {
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What techniques would you use to optimize database queries?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you identify and fix slow queries in a production environment?",
+                      "followUpQuestions": [
+                        {
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What tools would you use to monitor database performance?"
+                        }
+                      ]
+                    },
+                    {
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "Explain database indexing and how it impacts query performance."
+                    }
+                  ]
+                },
+                {
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "How do you implement transaction management in your applications?",
+                  "followUpQuestions": [
+                    {
+                      "weight": 10,
+                      "tags": ["senior"],
+                      "title": "What are the ACID properties and how do they relate to database transactions?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

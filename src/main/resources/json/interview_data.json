@@ -1,101 +1,102 @@
 {
   "domains": [
     {
-      "name": "Backend Development",
+      "id": "d1",
+      "title": "Frontend",
       "topics": [
         {
-          "name": "Node.js",
+          "id": "t1",
+          "title": "React",
           "themes": [
             {
-              "name": "Event Loop",
+              "id": "th1",
+              "title": "Virtual DOM",
               "questions": [
                 {
-                  "name": "Can you explain how the event loop works in Node.js?",
-                  "type": "binary",
-                  "difficulty": "hard",
+                  "id": "q1",
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What is the Virtual DOM and how does it work?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q1-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "What is the difference between the Virtual DOM and the Real DOM?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q1-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "How does React's diffing algorithm work to update the Real DOM?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q1-2",
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "Why is the Virtual DOM considered more efficient for rendering?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q2",
                   "weight": 8,
-                  "followupQuestions": [
+                  "tags": ["middle", "senior"],
+                  "title": "Explain the reconciliation process in React.",
+                  "followUpQuestions": [
                     {
-                      "name": "What are the phases of the event loop in Node.js?",
-                      "type": "binary",
-                      "difficulty": "hard",
-                      "weight": 7
+                      "id": "q2-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What are keys in React and why are they important for reconciliation?"
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Asynchronous Programming",
+              "id": "th2",
+              "title": "Component Lifecycle",
               "questions": [
                 {
-                  "name": "What is the difference between callbacks, promises, and async/await in Node.js?",
-                  "type": "multiple-choice",
-                  "difficulty": "medium",
-                  "weight": 7,
-                  "followupQuestions": [
+                  "id": "q3",
+                  "weight": 6,
+                  "tags": ["junior", "middle"],
+                  "title": "Explain the component lifecycle methods in React.",
+                  "followUpQuestions": [
                     {
-                      "name": "Can you convert a callback-based function into a Promise-based function?",
-                      "type": "binary",
-                      "difficulty": "medium",
-                      "weight": 6
+                      "id": "q3-1",
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "How do lifecycle methods differ between class components and functional components with hooks?"
+                    },
+                    {
+                      "id": "q3-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "When would you use componentDidUpdate or useEffect with dependencies?"
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "Streams",
-              "questions": [
+                },
                 {
-                  "name": "What are Node.js streams and how do they work?",
-                  "type": "binary",
-                  "difficulty": "hard",
+                  "id": "q4",
                   "weight": 8,
-                  "followupQuestions": [
+                  "tags": ["middle", "senior"],
+                  "title": "What are React Hooks and why were they introduced?",
+                  "followUpQuestions": [
                     {
-                      "name": "What are the different types of streams in Node.js?",
-                      "type": "binary",
-                      "difficulty": "medium",
-                      "weight": 6
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Memory Management",
-              "questions": [
-                {
-                  "name": "How does garbage collection work in Node.js?",
-                  "type": "binary",
-                  "difficulty": "medium",
-                  "weight": 7,
-                  "followupQuestions": [
+                      "id": "q4-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "Explain the rules of Hooks and why they're important."
+                    },
                     {
-                      "name": "What are memory leaks in Node.js and how can you prevent them?",
-                      "type": "binary",
-                      "difficulty": "hard",
-                      "weight": 8
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Clustering & Load Balancing",
-              "questions": [
-                {
-                  "name": "What is clustering in Node.js and why is it useful?",
-                  "type": "binary",
-                  "difficulty": "medium",
-                  "weight": 7,
-                  "followupQuestions": [
-                    {
-                      "name": "How does load balancing improve the scalability of a Node.js application?",
-                      "type": "open-ended",
-                      "difficulty": "hard",
-                      "weight": 8
+                      "id": "q4-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How would you implement a custom Hook and in what scenarios would you use one?"
                     }
                   ]
                 }
@@ -104,41 +105,104 @@
           ]
         },
         {
-          "name": "Scala",
+          "id": "t2",
+          "title": "JavaScript",
           "themes": [
             {
-              "name": "Functional Programming",
+              "id": "th3",
+              "title": "Asynchronous JavaScript",
               "questions": [
                 {
-                  "name": "What are higher-order functions in Scala?",
-                  "type": "binary",
-                  "difficulty": "medium",
-                  "weight": 6,
-                  "followupQuestions": [
+                  "id": "q5",
+                  "weight": 7,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "Explain Promises and their benefits over callbacks.",
+                  "followUpQuestions": [
                     {
-                      "name": "Can you give an example of a higher-order function in Scala?",
-                      "type": "open-ended",
-                      "difficulty": "medium",
-                      "weight": 5
+                      "id": "q5-1",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "What is Promise chaining and how does it work?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q5-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "How do you handle errors in Promise chains?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q5-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "Explain the difference between Promise.all, Promise.race, Promise.allSettled, and Promise.any."
+                    }
+                  ]
+                },
+                {
+                  "id": "q6",
+                  "weight": 8,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What is async/await and how does it simplify asynchronous code?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q6-1",
+                      "weight": 9,
+                      "tags": ["middle", "senior"],
+                      "title": "How do you handle errors with async/await?"
+                    },
+                    {
+                      "id": "q6-2",
+                      "weight": 7,
+                      "tags": ["junior", "middle"],
+                      "title": "Can you convert a function that returns a Promise to use async/await? Provide an example."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Concurrency",
+              "id": "th4",
+              "title": "Closures and Scope",
               "questions": [
                 {
-                  "name": "How does Scala handle concurrency?",
-                  "type": "multiple-choice",
-                  "difficulty": "hard",
-                  "weight": 8,
-                  "followupQuestions": [
+                  "id": "q7",
+                  "weight": 6,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What is a closure in JavaScript?",
+                  "followUpQuestions": [
                     {
-                      "name": "What is the difference between Future and Akka Actors?",
-                      "type": "binary",
-                      "difficulty": "hard",
-                      "weight": 7
+                      "id": "q7-1",
+                      "weight": 7,
+                      "tags": ["middle"],
+                      "title": "How can closures be used to create private variables?"
+                    },
+                    {
+                      "id": "q7-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "What are potential memory leak issues with closures and how can they be avoided?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q8",
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "Explain lexical scope in JavaScript.",
+                  "followUpQuestions": [
+                    {
+                      "id": "q8-1",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "What is the difference between function scope and block scope?"
+                    },
+                    {
+                      "id": "q8-2",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "How do let, const, and var differ in terms of scoping?"
                     }
                   ]
                 }
@@ -149,44 +213,104 @@
       ]
     },
     {
-      "name": "Frontend Development",
+      "id": "d2",
+      "title": "Backend",
       "topics": [
         {
-          "name": "React",
+          "id": "t3",
+          "title": "Node.js",
           "themes": [
             {
-              "name": "State Management",
+              "id": "th5",
+              "title": "Event Loop",
               "questions": [
                 {
-                  "name": "What are the differences between React's useState and useReducer hooks?",
-                  "type": "multiple-choice",
-                  "difficulty": "medium",
-                  "weight": 7,
-                  "followupQuestions": [
+                  "id": "q9",
+                  "weight": 8,
+                  "tags": ["middle", "senior", "mike wasowski interview"],
+                  "title": "What is the Node.js Event Loop and how does it work?",
+                  "followUpQuestions": [
                     {
-                      "name": "When would you choose useReducer over useState?",
-                      "type": "binary",
-                      "difficulty": "medium",
-                      "weight": 6
+                      "id": "q9-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What is the difference between the Event Loop and the Call Stack?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q9-1-1",
+                          "weight": 10,
+                          "tags": ["senior"],
+                          "title": "How do microtasks and macrotasks get processed in the Event Loop?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q9-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How does the Event Loop handle I/O operations differently from synchronous code?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q10",
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What are Node.js streams and how do they relate to the Event Loop?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q10-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you handle backpressure in Node.js streams?"
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Component Lifecycle",
+              "id": "th6",
+              "title": "Performance Optimization",
               "questions": [
                 {
-                  "name": "What are the key lifecycle methods in React class components?",
-                  "type": "multiple-choice",
-                  "difficulty": "medium",
+                  "id": "q11",
                   "weight": 7,
-                  "followupQuestions": [
+                  "tags": ["middle", "senior"],
+                  "title": "What techniques can you use to improve the performance of a Node.js application?",
+                  "followUpQuestions": [
                     {
-                      "name": "How does useEffect replace lifecycle methods in functional components?",
-                      "type": "binary",
-                      "difficulty": "medium",
-                      "weight": 6
+                      "id": "q11-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How does the Node.js cluster module help with performance?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q11-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What are the trade-offs of using the cluster module versus a load balancer?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q11-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How can you identify and fix memory leaks in Node.js applications?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q12",
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "Explain how to implement caching strategies in Node.js applications.",
+                  "followUpQuestions": [
+                    {
+                      "id": "q12-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "When would you use in-memory caching versus distributed caching?"
                     }
                   ]
                 }
@@ -195,22 +319,106 @@
           ]
         },
         {
-          "name": "CSS & Styling",
+          "id": "t4",
+          "title": "Databases",
           "themes": [
             {
-              "name": "CSS-in-JS",
+              "id": "th7",
+              "title": "SQL vs NoSQL",
               "questions": [
                 {
-                  "name": "What are the benefits of using CSS-in-JS libraries like styled-components?",
-                  "type": "binary",
-                  "difficulty": "medium",
+                  "id": "q13",
                   "weight": 6,
-                  "followupQuestions": [
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What are the key differences between SQL and NoSQL databases?",
+                  "followUpQuestions": [
                     {
-                      "name": "How do you create a styled component in React?",
-                      "type": "open-ended",
-                      "difficulty": "medium",
-                      "weight": 5
+                      "id": "q13-1",
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "In what scenarios would you choose a SQL database over a NoSQL database?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q13-1-1",
+                          "weight": 8,
+                          "tags": ["senior"],
+                          "title": "How would you handle relational data in a NoSQL database?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q13-2",
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "Explain the CAP theorem and how it applies to different database types."
+                    }
+                  ]
+                },
+                {
+                  "id": "q14",
+                  "weight": 8,
+                  "tags": ["senior"],
+                  "title": "How do you design a database schema for scalability?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q14-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What strategies would you use for database sharding and partitioning?"
+                    },
+                    {
+                      "id": "q14-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you handle database migrations with zero downtime?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "th8",
+              "title": "Database Optimization",
+              "questions": [
+                {
+                  "id": "q15",
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What techniques would you use to optimize database queries?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q15-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you identify and fix slow queries in a production environment?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q15-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What tools would you use to monitor database performance?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q15-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "Explain database indexing and how it impacts query performance."
+                    }
+                  ]
+                },
+                {
+                  "id": "q16",
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "How do you implement transaction management in your applications?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q16-1",
+                      "weight": 10,
+                      "tags": ["senior"],
+                      "title": "What are the ACID properties and how do they relate to database transactions?"
                     }
                   ]
                 }
@@ -221,44 +429,110 @@
       ]
     },
     {
-      "name": "Database Management",
+      "id": "d3",
+      "title": "DevOps",
       "topics": [
         {
-          "name": "SQL Databases",
+          "id": "t5",
+          "title": "Docker",
           "themes": [
             {
-              "name": "Indexing",
+              "id": "th9",
+              "title": "Containers",
               "questions": [
                 {
-                  "name": "What is the purpose of an index in a relational database?",
-                  "type": "binary",
-                  "difficulty": "medium",
+                  "id": "q17",
                   "weight": 6,
-                  "followupQuestions": [
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What is a container and how does it differ from a virtual machine?",
+                  "followUpQuestions": [
                     {
-                      "name": "What are the different types of indexes in SQL databases?",
-                      "type": "multiple-choice",
-                      "difficulty": "medium",
-                      "weight": 7
+                      "id": "q17-1",
+                      "weight": 7,
+                      "tags": ["middle"],
+                      "title": "What are the advantages of using containers for deployment?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q17-1-1",
+                          "weight": 8,
+                          "tags": ["senior"],
+                          "title": "How do namespaces and cgroups enable container isolation in Linux?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q17-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you ensure security in containerized environments?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q18",
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "Explain the concept of Docker layers and how they impact image size and build time.",
+                  "followUpQuestions": [
+                    {
+                      "id": "q18-1",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "What best practices would you follow when writing a Dockerfile?"
+                    },
+                    {
+                      "id": "q18-2",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "How would you optimize a Docker image for size and security?"
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Transactions & ACID",
+              "id": "th10",
+              "title": "Docker Compose",
               "questions": [
                 {
-                  "name": "What are ACID properties in SQL databases?",
-                  "type": "binary",
-                  "difficulty": "medium",
-                  "weight": 7,
-                  "followupQuestions": [
+                  "id": "q19",
+                  "weight": 6,
+                  "tags": ["junior", "middle"],
+                  "title": "What is Docker Compose and how does it simplify multi-container applications?",
+                  "followUpQuestions": [
                     {
-                      "name": "How does a database ensure atomicity in transactions?",
-                      "type": "binary",
-                      "difficulty": "medium",
-                      "weight": 6
+                      "id": "q19-1",
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "How do you manage environment variables and secrets in Docker Compose?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q19-1-1",
+                          "weight": 8,
+                          "tags": ["senior"],
+                          "title": "What are the best practices for handling secrets in a containerized environment?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q19-2",
+                      "weight": 7,
+                      "tags": ["middle"],
+                      "title": "How do you handle container networking in Docker Compose?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q20",
+                  "weight": 8,
+                  "tags": ["middle", "senior"],
+                  "title": "How would you use Docker Compose for local development versus production environments?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q20-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What strategies would you use to ensure parity between development and production environments?"
                     }
                   ]
                 }
@@ -267,41 +541,334 @@
           ]
         },
         {
-          "name": "NoSQL Databases",
+          "id": "t6",
+          "title": "CI/CD",
           "themes": [
             {
-              "name": "Data Modeling",
+              "id": "th11",
+              "title": "Continuous Integration",
               "questions": [
                 {
-                  "name": "What are the key differences between relational and NoSQL databases?",
-                  "type": "multiple-choice",
-                  "difficulty": "medium",
+                  "id": "q21",
                   "weight": 7,
-                  "followupQuestions": [
+                  "tags": ["junior", "middle"],
+                  "title": "What is Continuous Integration and what are its benefits?",
+                  "followUpQuestions": [
                     {
-                      "name": "When would you choose a document-based database over a relational database?",
-                      "type": "open-ended",
-                      "difficulty": "medium",
-                      "weight": 6
+                      "id": "q21-1",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How would you set up a CI pipeline for a modern web application?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q21-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What are some strategies to handle flaky tests in a CI pipeline?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q21-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How do you ensure code quality in a CI pipeline?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q22",
+                  "weight": 8,
+                  "tags": ["middle", "senior"],
+                  "title": "How do you implement automated testing in a CI pipeline?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q22-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What testing strategies work best in a CI environment?"
+                    },
+                    {
+                      "id": "q22-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you balance test coverage with build time in a CI pipeline?"
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Scalability",
+              "id": "th12",
+              "title": "Continuous Deployment",
               "questions": [
                 {
-                  "name": "How do NoSQL databases handle horizontal scaling?",
-                  "type": "binary",
-                  "difficulty": "hard",
+                  "id": "q23",
                   "weight": 8,
-                  "followupQuestions": [
+                  "tags": ["middle", "senior"],
+                  "title": "What is Continuous Deployment and how does it differ from Continuous Delivery?",
+                  "followUpQuestions": [
                     {
-                      "name": "What is sharding, and how does it improve database performance?",
-                      "type": "binary",
-                      "difficulty": "hard",
-                      "weight": 7
+                      "id": "q23-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What are the risks of Continuous Deployment and how do you mitigate them?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q23-1-1",
+                          "weight": 10,
+                          "tags": ["senior"],
+                          "title": "How do you implement feature flags in a CD environment?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q23-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How would you handle database migrations in a Continuous Deployment pipeline?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q24",
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "Explain different deployment strategies (blue-green, canary, rolling) and their trade-offs.",
+                  "followUpQuestions": [
+                    {
+                      "id": "q24-1",
+                      "weight": 10,
+                      "tags": ["senior"],
+                      "title": "How would you implement a canary deployment strategy?"
+                    },
+                    {
+                      "id": "q24-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you handle rollbacks in different deployment strategies?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "title": "System Design",
+      "topics": [
+        {
+          "id": "t7",
+          "title": "Microservices",
+          "themes": [
+            {
+              "id": "th13",
+              "title": "Service Communication",
+              "questions": [
+                {
+                  "id": "q25",
+                  "weight": 8,
+                  "tags": ["middle", "senior"],
+                  "title": "What are the different patterns for communication between microservices?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q25-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "When would you use synchronous versus asynchronous communication?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q25-1-1",
+                          "weight": 10,
+                          "tags": ["senior"],
+                          "title": "How would you handle failures in synchronous and asynchronous communication models?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q25-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "What are the advantages and disadvantages of using an API Gateway?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q26",
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "How would you implement service discovery in a microservices architecture?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q26-1",
+                      "weight": 10,
+                      "tags": ["senior"],
+                      "title": "What are the challenges of service discovery and how do modern tools address them?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "th14",
+              "title": "Data Management",
+              "questions": [
+                {
+                  "id": "q27",
+                  "weight": 8,
+                  "tags": ["senior"],
+                  "title": "How do you handle data consistency across microservices?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q27-1",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What is the Saga pattern and when would you use it?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q27-1-1",
+                          "weight": 10,
+                          "tags": ["senior"],
+                          "title": "How do you implement compensating transactions in a distributed system?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q27-2",
+                      "weight": 9,
+                      "tags": ["senior"],
+                      "title": "What is eventual consistency and how do you design systems around it?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q28",
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "What patterns would you use for querying data across multiple services?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q28-1",
+                      "weight": 10,
+                      "tags": ["senior"],
+                      "title": "How would you implement CQRS in a microservices architecture?"
+                    },
+                    {
+                      "id": "q28-2",
+                      "weight": 8,
+                      "tags": ["senior", "mike wasowski interview"],
+                      "title": "What are the trade-offs of using a GraphQL API versus multiple REST endpoints?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "t8",
+          "title": "Scalability",
+          "themes": [
+            {
+              "id": "th15",
+              "title": "Horizontal vs Vertical Scaling",
+              "questions": [
+                {
+                  "id": "q29",
+                  "weight": 7,
+                  "tags": ["junior", "middle", "mike wasowski interview"],
+                  "title": "What is the difference between horizontal and vertical scaling?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q29-1",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "When would you choose horizontal scaling over vertical scaling?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q29-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What are the challenges of horizontally scaling stateful services?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q29-2",
+                      "weight": 8,
+                      "tags": ["middle", "senior"],
+                      "title": "How do modern cloud platforms support different scaling approaches?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q30",
+                  "weight": 9,
+                  "tags": ["senior"],
+                  "title": "How would you design a system to handle a sudden 10x increase in traffic?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q30-1",
+                      "weight": 10,
+                      "tags": ["senior"],
+                      "title": "What auto-scaling strategies would you implement for unpredictable traffic patterns?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "th16",
+              "title": "Caching Strategies",
+              "questions": [
+                {
+                  "id": "q31",
+                  "weight": 7,
+                  "tags": ["middle", "senior"],
+                  "title": "What are different caching strategies and when would you use each?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q31-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How do you handle cache invalidation in a distributed system?",
+                      "followUpQuestions": [
+                        {
+                          "id": "q31-1-1",
+                          "weight": 9,
+                          "tags": ["senior"],
+                          "title": "What are the trade-offs between different cache eviction policies?"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q31-2",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "How would you implement a multi-level caching strategy?"
+                    }
+                  ]
+                },
+                {
+                  "id": "q32",
+                  "weight": 9,
+                  "tags": ["middle", "senior", "mike wasowski interview"],
+                  "title": "How do CDNs work and when should you use them?",
+                  "followUpQuestions": [
+                    {
+                      "id": "q32-1",
+                      "weight": 8,
+                      "tags": ["senior"],
+                      "title": "What are edge computing capabilities in modern CDNs and how can they be leveraged?"
+                    },
+                    {
+                      "id": "q32-2",
+                      "weight": 7,
+                      "tags": ["middle", "senior"],
+                      "title": "How do you handle dynamic content with CDNs?"
                     }
                   ]
                 }
@@ -313,3 +880,4 @@
     }
   ]
 }
+

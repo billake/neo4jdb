@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   neo4j:
     image: neo4j:latest
@@ -10,5 +11,19 @@ services:
       - "7687:7687"
     volumes:
       - neo4j_data:/data
+
+  app:
+    build: .
+    container_name: neo4j_app
+    depends_on:
+      - neo4j
+    environment:
+      - NEO4J_URL=bolt://neo4j:7687
+      - NEO4J_USERNAME=neo4j
+      - NEO4J_PASSWORD=password
+    command: ["java", "-jar", "/app/neo4jdb-app.jar"]
+    ports:
+      - "8080:8080"
+
 volumes:
   neo4j_data:

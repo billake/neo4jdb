@@ -23,7 +23,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % "2.6.19",
   "io.circe" %% "circe-core" % "0.14.5",
   "io.circe" %% "circe-parser" % "0.14.5",
-  "io.circe" %% "circe-generic" % "0.14.5"
+  "io.circe" %% "circe-generic" % "0.14.5",
+  "eu.michael-simons.neo4j" % "neo4j-migrations" % "1.7.0"
 ) ++ swaggerDependencies
 
 assembly / assemblyJarName  := "neo4jdb-app.jar"

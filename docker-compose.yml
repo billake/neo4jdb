@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   neo4j:
     image: neo4j:latest
     container_name: neo4j_interview
@@ -24,6 +25,7 @@ services:
     command: ["java", "-jar", "/app/neo4jdb-app.jar"]
     ports:
       - "8080:8080"
+    restart: on-failure:5
 
 volumes:
   neo4j_data:

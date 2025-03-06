@@ -2,7 +2,6 @@ package com.inno.hackaton2025
 package swagger
 
 import akka.actor.ActorSystem
-import com.github.swagger.akka.SwaggerHttpService
 import com.github.swagger.akka.model.Info
 import com.github.swagger.akka.ui.SwaggerHttpWithUiService
 import com.inno.hackaton2025.api.ApiRoutes

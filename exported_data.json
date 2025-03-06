@@ -1,0 +1,315 @@
+{
+  "domains" : [
+    {
+      "name" : "Backend Development",
+      "topics" : [
+        {
+          "name" : "Scala",
+          "themes" : [
+            {
+              "name" : "Concurrency",
+              "questions" : [
+                {
+                  "name" : "How does Scala handle concurrency?",
+                  "type" : "multiple-choice",
+                  "difficulty" : "hard",
+                  "weight" : 8,
+                  "followupQuestions" : [
+                    {
+                      "name" : "What is the difference between Future and Akka Actors?",
+                      "type" : "binary",
+                      "difficulty" : "hard",
+                      "weight" : 7
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Functional Programming",
+              "questions" : [
+                {
+                  "name" : "What are higher-order functions in Scala?",
+                  "type" : "binary",
+                  "difficulty" : "medium",
+                  "weight" : 6,
+                  "followupQuestions" : [
+                    {
+                      "name" : "Can you give an example of a higher-order function in Scala?",
+                      "type" : "open-ended",
+                      "difficulty" : "medium",
+                      "weight" : 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Node.js",
+          "themes" : [
+            {
+              "name" : "Clustering & Load Balancing",
+              "questions" : [
+                {
+                  "name" : "What is clustering in Node.js and why is it useful?",
+                  "type" : "binary",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "How does load balancing improve the scalability of a Node.js application?",
+                      "type" : "open-ended",
+                      "difficulty" : "hard",
+                      "weight" : 8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Memory Management",
+              "questions" : [
+                {
+                  "name" : "How does garbage collection work in Node.js?",
+                  "type" : "binary",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "What are memory leaks in Node.js and how can you prevent them?",
+                      "type" : "binary",
+                      "difficulty" : "hard",
+                      "weight" : 8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Streams",
+              "questions" : [
+                {
+                  "name" : "What are Node.js streams and how do they work?",
+                  "type" : "binary",
+                  "difficulty" : "hard",
+                  "weight" : 8,
+                  "followupQuestions" : [
+                    {
+                      "name" : "What are the different types of streams in Node.js?",
+                      "type" : "binary",
+                      "difficulty" : "medium",
+                      "weight" : 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Asynchronous Programming",
+              "questions" : [
+                {
+                  "name" : "What is the difference between callbacks, promises, and async/await in Node.js?",
+                  "type" : "multiple-choice",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "Can you convert a callback-based function into a Promise-based function?",
+                      "type" : "binary",
+                      "difficulty" : "medium",
+                      "weight" : 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Event Loop",
+              "questions" : [
+                {
+                  "name" : "Can you explain how the event loop works in Node.js?",
+                  "type" : "binary",
+                  "difficulty" : "hard",
+                  "weight" : 8,
+                  "followupQuestions" : [
+                    {
+                      "name" : "What are the phases of the event loop in Node.js?",
+                      "type" : "binary",
+                      "difficulty" : "hard",
+                      "weight" : 7
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "Frontend Development",
+      "topics" : [
+        {
+          "name" : "CSS & Styling",
+          "themes" : [
+            {
+              "name" : "CSS-in-JS",
+              "questions" : [
+                {
+                  "name" : "What are the benefits of using CSS-in-JS libraries like styled-components?",
+                  "type" : "binary",
+                  "difficulty" : "medium",
+                  "weight" : 6,
+                  "followupQuestions" : [
+                    {
+                      "name" : "How do you create a styled component in React?",
+                      "type" : "open-ended",
+                      "difficulty" : "medium",
+                      "weight" : 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "React",
+          "themes" : [
+            {
+              "name" : "Component Lifecycle",
+              "questions" : [
+                {
+                  "name" : "What are the key lifecycle methods in React class components?",
+                  "type" : "multiple-choice",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "How does useEffect replace lifecycle methods in functional components?",
+                      "type" : "binary",
+                      "difficulty" : "medium",
+                      "weight" : 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "State Management",
+              "questions" : [
+                {
+                  "name" : "What are the differences between React's useState and useReducer hooks?",
+                  "type" : "multiple-choice",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "When would you choose useReducer over useState?",
+                      "type" : "binary",
+                      "difficulty" : "medium",
+                      "weight" : 6
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "Database Management",
+      "topics" : [
+        {
+          "name" : "NoSQL Databases",
+          "themes" : [
+            {
+              "name" : "Scalability",
+              "questions" : [
+                {
+                  "name" : "How do NoSQL databases handle horizontal scaling?",
+                  "type" : "binary",
+                  "difficulty" : "hard",
+                  "weight" : 8,
+                  "followupQuestions" : [
+                    {
+                      "name" : "What is sharding, and how does it improve database performance?",
+                      "type" : "binary",
+                      "difficulty" : "hard",
+                      "weight" : 7
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Data Modeling",
+              "questions" : [
+                {
+                  "name" : "What are the key differences between relational and NoSQL databases?",
+                  "type" : "multiple-choice",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "When would you choose a document-based database over a relational database?",
+                      "type" : "open-ended",
+                      "difficulty" : "medium",
+                      "weight" : 6
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "SQL Databases",
+          "themes" : [
+            {
+              "name" : "Transactions & ACID",
+              "questions" : [
+                {
+                  "name" : "What are ACID properties in SQL databases?",
+                  "type" : "binary",
+                  "difficulty" : "medium",
+                  "weight" : 7,
+                  "followupQuestions" : [
+                    {
+                      "name" : "How does a database ensure atomicity in transactions?",
+                      "type" : "binary",
+                      "difficulty" : "medium",
+                      "weight" : 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name" : "Indexing",
+              "questions" : [
+                {
+                  "name" : "What is the purpose of an index in a relational database?",
+                  "type" : "binary",
+                  "difficulty" : "medium",
+                  "weight" : 6,
+                  "followupQuestions" : [
+                    {
+                      "name" : "What are the different types of indexes in SQL databases?",
+                      "type" : "multiple-choice",
+                      "difficulty" : "medium",
+                      "weight" : 7
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

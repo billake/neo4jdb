@@ -21,7 +21,8 @@ class Neo4jService(uri: String, user: String, password: String) {
         val domainId = domain.id.getOrElse(UUID.randomUUID())
         val domainQuery =
           s"""
-             |MERGE (d:Domain {id: '${domainId.toString}', title: '${escapeCypherString(domain.title)}'})
+             |MERGE (d:Domain {title: '${escapeCypherString(domain.title)}'})
+             |ON CREATE SET d.id = '${domainId.toString}'
              |""".stripMargin
         session.run(domainQuery)
 
@@ -29,8 +30,9 @@ class Neo4jService(uri: String, user: String, password: String) {
           val topicId = topic.id.getOrElse(UUID.randomUUID())
           val topicQuery =
             s"""
-               |MERGE (d:Domain {id: '${domainId.toString}'})
-               |MERGE (t:Topic {id: '${topicId.toString}', title: '${escapeCypherString(topic.title)}'})
+               |MATCH (d:Domain {title: '${escapeCypherString(domain.title)}'})
+               |MERGE (t:Topic {title: '${escapeCypherString(topic.title)}'})
+               |ON CREATE SET t.id = '${topicId.toString}'
                |MERGE (d)-[:HAS_TOPIC]->(t)
                |""".stripMargin
           session.run(topicQuery)
@@ -39,8 +41,9 @@ class Neo4jService(uri: String, user: String, password: String) {
             val themeId = theme.id.getOrElse(UUID.randomUUID())
             val themeQuery =
               s"""
-                 |MERGE (t:Topic {id: '${topicId.toString}'})
-                 |MERGE (th:Theme {id: '${themeId.toString}', title: '${escapeCypherString(theme.title)}'})
+                 |MATCH (t:Topic {title: '${escapeCypherString(topic.title)}'})
+                 |MERGE (th:Theme {title: '${escapeCypherString(theme.title)}'})
+                 |ON CREATE SET th.id = '${themeId.toString}'
                  |MERGE (t)-[:HAS_THEME]->(th)
                  |""".stripMargin
             session.run(themeQuery)
@@ -50,8 +53,9 @@ class Neo4jService(uri: String, user: String, password: String) {
               val tagsCypher = question.tags.map(tag => s"'${escapeCypherString(tag)}'").mkString("[", ", ", "]")
               val questionQuery =
                 s"""
-                   |MERGE (th:Theme {id: '${themeId.toString}'})
-                   |MERGE (q:Question {id: '${questionId.toString}', weight: ${question.weight}, tags: $tagsCypher, title: '${escapeCypherString(question.title)}'})
+                   |MATCH (th:Theme {title: '${escapeCypherString(theme.title)}'})
+                   |MERGE (q:Question {title: '${escapeCypherString(question.title)}'})
+                   |ON CREATE SET q.id = '${questionId.toString}', q.weight = ${question.weight}, q.tags = $tagsCypher
                    |MERGE (th)-[:HAS_QUESTION]->(q)
                    |""".stripMargin
               session.run(questionQuery)
@@ -61,8 +65,9 @@ class Neo4jService(uri: String, user: String, password: String) {
                 val fqTagsCypher = fq.tags.map(tag => s"'${escapeCypherString(tag)}'").mkString("[", ", ", "]")
                 val fqQuery =
                   s"""
-                     |MERGE (q:Question {id: '${questionId.toString}'})
-                     |MERGE (fq:FollowUpQuestion {id: '${fqId.toString}', weight: ${fq.weight}, tags: $fqTagsCypher, title: '${escapeCypherString(fq.title)}'})
+                     |MATCH (q:Question {title: '${escapeCypherString(question.title)}'})
+                     |MERGE (fq:FollowUpQuestion {title: '${escapeCypherString(fq.title)}'})
+                     |ON CREATE SET fq.id = '${fqId.toString}', fq.weight = ${fq.weight}, fq.tags = $fqTagsCypher
                      |MERGE (q)-[:HAS_FOLLOWUP]->(fq)
                      |""".stripMargin
                 session.run(fqQuery)

@@ -1,5 +1,5 @@
 
-ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / version := "1.0.1"
 
 ThisBuild / scalaVersion := "2.13.16"
 
@@ -24,7 +24,7 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-core" % "0.14.5",
   "io.circe" %% "circe-parser" % "0.14.5",
   "io.circe" %% "circe-generic" % "0.14.5",
-  "eu.michael-simons.neo4j" % "neo4j-migrations" % "1.7.0"
+  "eu.michael-simons.neo4j" % "neo4j-migrations" % "2.13.2"
 ) ++ swaggerDependencies
 
 assembly / assemblyJarName  := "neo4jdb-app.jar"
